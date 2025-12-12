@@ -31,6 +31,8 @@ jobs:
           - 17
           - 21
           - 22
+          - 24
+          - 25
     steps:
       - name: Git checkout for Github repository workspace
         uses: actions/checkout@v4
