@@ -28,8 +28,8 @@ ARG TARGETARCH=amd64
 
 RUN set -eux; \
   case "${TARGETARCH}" in \
-    amd64)  URL="https://download.oracle.com/graalvm/24/archive/graalvm-jdk-24.0.2_linux-x64_bin.tar.gz" ;; \
-    arm64)  URL="https://download.oracle.com/graalvm/24/archive/graalvm-jdk-24.0.2_linux-aarch64_bin.tar.gz" ;; \
+    amd64)  URL="https://download.oracle.com/graalvm/24/latest/graalvm-jdk-24_linux-x64_bin.tar.gz" ;; \
+    arm64)  URL="https://download.oracle.com/graalvm/24/latest/graalvm-jdk-24_linux-aarch64_bin.tar.gz" ;; \
     *) echo "Unsupported TARGETARCH: ${TARGETARCH}" >&2; exit 1 ;; \
   esac; \
   wget -O /tmp/graalvm.tar.gz "$URL"; \
