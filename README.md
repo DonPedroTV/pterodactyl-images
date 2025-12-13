@@ -15,7 +15,7 @@ This fork is maintained by [**DonPedroTV**](https://github.com/DonPedroTV) as a 
   - [☕ Java Eclipse Temurin (AMD64/ARM64)](#java-eclipse-temurin-amd64arm64)
   - [☕ Java Azul Zulu (AMD64/ARM64)](#java-azul-zulu-amd64arm64)
   - [☕ Java GraalVM (AMD64/ARM64)](#java-graalvm-amd64arm64)
-  - [☕ Java Oracle GraalVM (Enterprise-grade JIT) (AMD64/ARM64)](#java-oracle-graalvm-enterprise-grade-jit-amd64arm64)
+  - [☕ Java Oracle GraalVM (with Enterprise Edition features) (AMD64/ARM64)](#java-oracle-graalvm-with-enterprise-edition-features-amd64arm64)
   - [☕ Java Dragonwell (AMD64/ARM64)](#java-dragonwell-amd64arm64)
   - [☕ Java Liberica (AMD64/ARM64)](#java-liberica-amd64arm64)
   - [☕ Java OpenJ9 (AMD64)](#java-openj9-amd64)
@@ -48,7 +48,7 @@ Navigate to `Admin Panel -> Nests -> Select your egg`. Add Docker image URL(s) f
 | [☕ Java Azul Zulu (AMD64/ARM64)](#java-azul-zulu-amd64arm64)             | ![AMD64](https://img.shields.io/badge/AMD64-Supported-green) ![ARM64](https://img.shields.io/badge/ARM64-Supported-green) |
 | [☕ Java Eclipse Temurin (AMD64/ARM64)](#java-eclipse-temurin-amd64arm64) | ![AMD64](https://img.shields.io/badge/AMD64-Supported-green) ![ARM64](https://img.shields.io/badge/ARM64-Supported-green) |
 | [☕ Java GraalVM (AMD64/ARM64)](#java-graalvm-amd64arm64)                 | ![AMD64](https://img.shields.io/badge/AMD64-Supported-green) ![ARM64](https://img.shields.io/badge/ARM64-Supported-green) |
-| [☕ Java Oracle GraalVM (Enterprise-grade JIT) (AMD64/ARM64)](#java-oracle-graalvm-enterprise-grade-jit-amd64arm64)                 | ![AMD64](https://img.shields.io/badge/AMD64-Supported-green) ![ARM64](https://img.shields.io/badge/ARM64-Supported-green) |
+| [☕ Java Oracle GraalVM (with Enterprise Edition features) (AMD64/ARM64)](#java-oracle-graalvm-with-enterprise-edition-features-amd64arm64)                 | ![AMD64](https://img.shields.io/badge/AMD64-Supported-green) ![ARM64](https://img.shields.io/badge/ARM64-Supported-green) |
 | [☕ Java Dragonwell (AMD64/ARM64)](#java-dragonwell-amd64arm64)           | ![AMD64](https://img.shields.io/badge/AMD64-Supported-green) ![ARM64](https://img.shields.io/badge/ARM64-Supported-green) |
 | [☕ Java Liberica (AMD64/ARM64)](#java-liberica-amd64arm64)               | ![AMD64](https://img.shields.io/badge/AMD64-Supported-green) ![ARM64](https://img.shields.io/badge/ARM64-Supported-green) |
 | [☕ Java OpenJ9 (AMD64)](#java-openj9-amd64)                        | ![AMD64](https://img.shields.io/badge/AMD64-Supported-green) |
@@ -117,11 +117,10 @@ Navigate to `Admin Panel -> Nests -> Select your egg`. Add Docker image URL(s) f
 | Java 24 GraalVM JDK | `ghcr.io/donpedrotv/pterodactyl-images:java_24_graalvm` |
 | Java 25 GraalVM JDK | `ghcr.io/donpedrotv/pterodactyl-images:java_25_graalvm` |
 
-### Java Oracle GraalVM (Enterprise-grade JIT) (AMD64/ARM64)
+### Java Oracle GraalVM (with Enterprise Edition features) (AMD64/ARM64)
 
 | Version | Image Tag |
 |---------|-----------|
-| Java 24 GraalVM-EE JDK | `ghcr.io/donpedrotv/pterodactyl-images:java_24_graalvm_ee` |
 | Java 25 GraalVM-EE JDK | `ghcr.io/donpedrotv/pterodactyl-images:java_25_graalvm_ee` |
 
 ### Java Dragonwell (AMD64/ARM64)
