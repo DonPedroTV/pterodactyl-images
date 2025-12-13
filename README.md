@@ -121,7 +121,7 @@ Navigate to `Admin Panel -> Nests -> Select your egg`. Add Docker image URL(s) f
 
 | Version | Image Tag |
 |---------|-----------|
-| Java 25 GraalVM-EE JDK | `ghcr.io/donpedrotv/pterodactyl-images:java_25_graalvm_ee` |
+| Java 26 GraalVM-EE JDK | `ghcr.io/donpedrotv/pterodactyl-images:java_26_graalvm_ee` |
 
 ### Java Dragonwell (AMD64/ARM64)
 
