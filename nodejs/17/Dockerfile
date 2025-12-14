@@ -5,7 +5,7 @@ ENV TZ=Etc/UTC
 
 RUN set -eux; \
   sed -i 's|deb http://deb.debian.org/debian|deb [trusted=yes] http://archive.debian.org/debian|g' /etc/apt/sources.list; \
-  sed -i 's|deb http://security.debian.org/debian-security|deb [trusted=yes] http://archive.debian.org/debian-security|g' /etc/apt/sources.list; \
+  sed -i 's|deb http://security.debian.org/debian-security|deb [trusted=yes] http://deb.debian.org/debian-security|g' /etc/apt/sources.list; \
   printf 'Acquire::Check-Valid-Until "false";\n' > /etc/apt/apt.conf.d/99no-check-valid; \
   apt-get update; \
   apt-get -y install --no-install-recommends \
