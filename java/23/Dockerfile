@@ -1,15 +1,14 @@
-FROM        eclipse-temurin:23-jammy
+FROM        eclipse-temurin:23-ubi10-minimal
 
 LABEL       author="Softwarenoob" maintainer="admin@softwarenoob.com"
 LABEL       org.opencontainers.image.source="https://github.com/DonPedroTV/pterodactyl-images"
 LABEL       org.opencontainers.image.licenses="MIT"
 
-RUN         apt-get update -y \
-            && apt-get install -y --no-install-recommends curl ca-certificates openssl git tar sqlite3 fontconfig libfreetype6 libstdc++6 lsof build-essential tzdata iproute2 locales \
-            && apt-get clean \
-            && rm -rf /var/lib/apt/lists/* \
+RUN         microdnf update -y \
+            && microdnf install -y curl ca-certificates openssl git tar gzip sqlite fontconfig tzdata iproute gcc gcc-c++ freetype libstdc++ lsof glibc-locale-source glibc-langpack-en \
+            && microdnf clean all \
             && useradd -m -d /home/container container \
-            && locale-gen en_US.UTF-8
+            && localedef -i en_US -f UTF-8 en_US.UTF-8
 
 ENV         LC_ALL=en_US.UTF-8
 ENV         LANG=en_US.UTF-8
