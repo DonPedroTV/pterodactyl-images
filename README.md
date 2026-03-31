@@ -122,6 +122,7 @@ Navigate to `Admin Panel -> Nests -> Select your egg`. Add Docker image URL(s) f
 | Java 22 GraalVM JDK | `ghcr.io/donpedrotv/pterodactyl-images:java_22_graalvm` |
 | Java 24 GraalVM JDK | `ghcr.io/donpedrotv/pterodactyl-images:java_24_graalvm` |
 | Java 25 GraalVM JDK | `ghcr.io/donpedrotv/pterodactyl-images:java_25_graalvm` |
+| Java 26 GraalVM JDK | `ghcr.io/donpedrotv/pterodactyl-images:java_26_graalvm` |
 
 ### Java Oracle GraalVM (with Enterprise Edition features) (AMD64/ARM64)
 
@@ -151,6 +152,7 @@ Navigate to `Admin Panel -> Nests -> Select your egg`. Add Docker image URL(s) f
 | Java 23 | `ghcr.io/donpedrotv/pterodactyl-images:java_23_liberica` |
 | Java 24 | `ghcr.io/donpedrotv/pterodactyl-images:java_24_liberica` |
 | Java 25 (LTS) | `ghcr.io/donpedrotv/pterodactyl-images:java_25_liberica` |
+| Java 26 | `ghcr.io/donpedrotv/pterodactyl-images:java_26_liberica` |
 
 ### Java OpenJ9 (AMD64)
 
@@ -164,6 +166,7 @@ Navigate to `Admin Panel -> Nests -> Select your egg`. Add Docker image URL(s) f
 | Java 20 | `ghcr.io/donpedrotv/pterodactyl-images:java_20_openj9` |
 | Java 21 | `ghcr.io/donpedrotv/pterodactyl-images:java_21_openj9` |
 | Java 25 (LTS) | `ghcr.io/donpedrotv/pterodactyl-images:java_25_openj9` |
+| Java 26 | `ghcr.io/donpedrotv/pterodactyl-images:java_26_openj9` |
 
 ### Java Shenandoah (AMD64/ARM64)
 
@@ -176,6 +179,7 @@ These are [Shipilev experimental builds](https://builds.shipilev.net/). If you'r
 | Java 17 | `ghcr.io/donpedrotv/pterodactyl-images:java_17_shenandoah` |
 | Java 21 | `ghcr.io/donpedrotv/pterodactyl-images:java_21_shenandoah` |
 | Java 25 | `ghcr.io/donpedrotv/pterodactyl-images:java_25_shenandoah` |
+| Java 26 | `ghcr.io/donpedrotv/pterodactyl-images:java_26_shenandoah` |
 
 ## Node.js (AMD64/ARM64)
 
