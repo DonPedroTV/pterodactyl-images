@@ -86,11 +86,7 @@ Navigate to `Admin Panel -> Nests -> Select your egg`. Add Docker image URL(s) f
 | Java 19 | `ghcr.io/donpedrotv/pterodactyl-images:java_19` |
 | Java 20 | `ghcr.io/donpedrotv/pterodactyl-images:java_20` |
 | Java 21 (LTS) | `ghcr.io/donpedrotv/pterodactyl-images:java_21` |
-| Java 22 | `ghcr.io/donpedrotv/pterodactyl-images:java_22` |
-| Java 23 | `ghcr.io/donpedrotv/pterodactyl-images:java_23` |
-| Java 24 | `ghcr.io/donpedrotv/pterodactyl-images:java_24` |
 | Java 25 (LTS) | `ghcr.io/donpedrotv/pterodactyl-images:java_25` |
-| Java 26 | `ghcr.io/donpedrotv/pterodactyl-images:java_26` |
 
 ### Java Azul Zulu (AMD64/ARM64)
 
