@@ -4,9 +4,10 @@ LABEL       author="DonPedroTV" maintainer="admin@donpedrotv.com"
 LABEL       org.opencontainers.image.source="https://github.com/DonPedroTV/pterodactyl-images"
 LABEL       org.opencontainers.image.licenses="MIT"
 
-ENV         DEBIAN_FRONTEND noninteractive
+ENV         DEBIAN_FRONTEND=noninteractive
 
-RUN         apt-get update \
+RUN         find /etc/apt -type f \( -name '*.list' -o -name '*.sources' \) -exec sed -i 's|http://ports.ubuntu.com|https://ports.ubuntu.com|g' {} + \
+            && apt-get -o Acquire::Retries=5 update \
             && apt-get -y install --no-install-recommends curl ffmpeg iproute2 git sqlite3 python3 tzdata ca-certificates dnsutils fontconfig libfreetype6 libstdc++6 lsof build-essential locales \
             && apt-get clean \
             && rm -rf /var/lib/apt/lists/* \
