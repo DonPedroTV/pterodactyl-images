@@ -8,7 +8,6 @@ on:
       - main
     paths:
       - java-dragonwell/**
-      - .github/workflows/java-dragonwell.yml
 
 permissions:
   actions: read
@@ -20,17 +19,14 @@ concurrency:
 
 jobs:
   build_and_push:
-    name: "java_${{ matrix.tag }}_dragonwell_${{ matrix.arch }}"
-    runs-on: ${{ matrix.arch == 'arm64' && 'ubuntu-24.04-arm' || 'ubuntu-latest' }}
+    name: "java_${{ matrix.tag }}_dragonwell"
+    runs-on: ubuntu-latest
     env:
       DOCKER_CLIENT_TIMEOUT: 120
       COMPOSE_HTTP_TIMEOUT: 120
     strategy:
       fail-fast: false
       matrix:
-        arch:
-          - amd64
-          - arm64
         tag:
           - 8
           - 11
@@ -39,6 +35,12 @@ jobs:
     steps:
       - name: Git checkout for Github repository workspace
         uses: actions/checkout@v6
+
+      - name: Setup QEMU for multiarch builds
+        uses: docker/setup-qemu-action@v4
+        with:
+          image: docker.io/tonistiigi/binfmt:qemu-v10.1.3-60
+          platforms: arm64
 
       - name: Setup Docker buildx
         uses: docker/setup-buildx-action@v4
@@ -56,25 +58,7 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           context: ./java-dragonwell
-          platforms: linux/${{ matrix.arch }}
+          platforms: linux/amd64, linux/arm64
           file: ./java-dragonwell/${{ matrix.tag }}/Dockerfile
           push: true
-          tags: ghcr.io/donpedrotv/pterodactyl-images:java_${{ matrix.tag }}_dragonwell-${{ matrix.arch }}
-
-  merge:
-    name: "java_${{ matrix.tag }}_dragonwell"
-    if: ${{ always() }}
-    needs: build_and_push
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        tag: [8, 11, 17, 21]
-    steps:
-      - uses: docker/setup-buildx-action@v4
-      - uses: docker/login-action@v4
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-      - run: docker buildx imagetools create --tag ghcr.io/donpedrotv/pterodactyl-images:java_${{ matrix.tag }}_dragonwell ghcr.io/donpedrotv/pterodactyl-images:java_${{ matrix.tag }}_dragonwell-amd64 ghcr.io/donpedrotv/pterodactyl-images:java_${{ matrix.tag }}_dragonwell-arm64
+          tags: ghcr.io/donpedrotv/pterodactyl-images:java_${{ matrix.tag }}_dragonwell

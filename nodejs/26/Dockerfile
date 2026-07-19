@@ -4,8 +4,8 @@ LABEL       author="DonPedroTV" maintainer="admin@donpedrotv.com"
 LABEL       org.opencontainers.image.source="https://github.com/DonPedroTV/pterodactyl-images"
 LABEL       org.opencontainers.image.licenses="MIT"
 
-RUN         apt-get -o Acquire::Retries=5 update \
-            && apt-get -o Acquire::Retries=5 -y install --no-install-recommends curl ffmpeg iproute2 git sqlite3 python3 tzdata ca-certificates dnsutils build-essential locales \
+RUN         apt-get update \
+            && apt-get -y install --no-install-recommends curl ffmpeg iproute2 git sqlite3 python3 tzdata ca-certificates dnsutils build-essential locales \
             && apt-get clean \
             && rm -rf /var/lib/apt/lists/* \
             && useradd -m -d /home/container container \
