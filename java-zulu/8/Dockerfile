@@ -8,7 +8,7 @@ ENV         DEBIAN_FRONTEND=noninteractive
 
 RUN         find /etc/apt -type f \( -name '*.list' -o -name '*.sources' \) -exec sed -i 's|http://ports.ubuntu.com|https://ports.ubuntu.com|g' {} + \
             && apt-get -o Acquire::Retries=5 update \
-            && apt-get -y install --no-install-recommends ffmpeg iproute2 git sqlite3 python3 tzdata ca-certificates dnsutils fontconfig libfreetype6 libstdc++6 lsof build-essential locales \
+            && apt-get -o Acquire::Retries=5 -y install --no-install-recommends ffmpeg iproute2 git sqlite3 python3 tzdata ca-certificates dnsutils fontconfig libfreetype6 libstdc++6 lsof build-essential locales \
             && apt-get clean \
             && rm -rf /var/lib/apt/lists/* \
             && useradd -m -d /home/container container \
