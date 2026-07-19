@@ -18,7 +18,7 @@ This fork is maintained by [**DonPedroTV**](https://github.com/DonPedroTV) as a 
   - [☕ Java Oracle GraalVM (with Enterprise Edition features) (AMD64/ARM64)](#java-oracle-graalvm-with-enterprise-edition-features-amd64arm64)
   - [☕ Java Dragonwell (AMD64/ARM64)](#java-dragonwell-amd64arm64)
   - [☕ Java Liberica (AMD64/ARM64)](#java-liberica-amd64arm64)
-  - [☕ Java OpenJ9 (AMD64)](#java-openj9-amd64)
+  - [☕ Java OpenJ9 (AMD64/ARM64)](#java-openj9-amd64arm64)
   - [☕ Java Shenandoah (AMD64/ARM64)](#java-shenandoah-amd64arm64)
 - [🟢 Node.js (AMD64/ARM64)](#nodejs-amd64arm64)
 - [🐍 Python (AMD64/ARM64)](#python-amd64arm64)
@@ -51,7 +51,7 @@ Navigate to `Admin Panel -> Nests -> Select your egg`. Add Docker image URL(s) f
 | [☕ Java Oracle GraalVM (with Enterprise Edition features) (AMD64/ARM64)](#java-oracle-graalvm-with-enterprise-edition-features-amd64arm64)                 | ![AMD64](https://img.shields.io/badge/AMD64-Supported-green) ![ARM64](https://img.shields.io/badge/ARM64-Supported-green) |
 | [☕ Java Dragonwell (AMD64/ARM64)](#java-dragonwell-amd64arm64)           | ![AMD64](https://img.shields.io/badge/AMD64-Supported-green) ![ARM64](https://img.shields.io/badge/ARM64-Supported-green) |
 | [☕ Java Liberica (AMD64/ARM64)](#java-liberica-amd64arm64)               | ![AMD64](https://img.shields.io/badge/AMD64-Supported-green) ![ARM64](https://img.shields.io/badge/ARM64-Supported-green) |
-| [☕ Java OpenJ9 (AMD64)](#java-openj9-amd64)                        | ![AMD64](https://img.shields.io/badge/AMD64-Supported-green) |
+| [☕ Java OpenJ9 (AMD64/ARM64)](#java-openj9-amd64arm64)                   | ![AMD64](https://img.shields.io/badge/AMD64-Supported-green) ![ARM64](https://img.shields.io/badge/ARM64-Supported-green) |
 | [☕ Java Shenandoah (AMD64/ARM64)](#java-shenandoah-amd64arm64)           | ![AMD64](https://img.shields.io/badge/AMD64-Supported-green) ![ARM64](https://img.shields.io/badge/ARM64-Supported-green) |
 | [🟢 Node.js (AMD64/ARM64)](#nodejs-amd64arm64)                            | ![AMD64](https://img.shields.io/badge/AMD64-Supported-green) ![ARM64](https://img.shields.io/badge/ARM64-Supported-green) |
 | [🐍 Python (AMD64/ARM64)](#python-amd64arm64)                             | ![AMD64](https://img.shields.io/badge/AMD64-Supported-green) ![ARM64](https://img.shields.io/badge/ARM64-Supported-green) |
@@ -87,6 +87,7 @@ Navigate to `Admin Panel -> Nests -> Select your egg`. Add Docker image URL(s) f
 | Java 20 | `ghcr.io/donpedrotv/pterodactyl-images:java_20` |
 | Java 21 (LTS) | `ghcr.io/donpedrotv/pterodactyl-images:java_21` |
 | Java 25 (LTS) | `ghcr.io/donpedrotv/pterodactyl-images:java_25` |
+| Java 26 | `ghcr.io/donpedrotv/pterodactyl-images:java_26` |
 
 ### Java Azul Zulu (AMD64/ARM64)
 
@@ -122,10 +123,14 @@ Navigate to `Admin Panel -> Nests -> Select your egg`. Add Docker image URL(s) f
 
 ### Java Oracle GraalVM (with Enterprise Edition features) (AMD64/ARM64)
 
+> **NOTE**: Java 26 uses the latest available upstream early-access build, `26.0.0-ea.13`.
+
 | Version | Image Tag |
 |---------|-----------|
-| Java 25 GraalVM-EE JDK | `ghcr.io/donpedrotv/pterodactyl-images:java_25_graalvm_ee` |
-| Java 26 GraalVM-EE JDK | `ghcr.io/donpedrotv/pterodactyl-images:java_26_graalvm_ee` |
+| Java 17 (LTS) Oracle GraalVM JDK | `ghcr.io/donpedrotv/pterodactyl-images:java_17_graalvm_ee` |
+| Java 21 (LTS) Oracle GraalVM JDK | `ghcr.io/donpedrotv/pterodactyl-images:java_21_graalvm_ee` |
+| Java 25 (LTS) Oracle GraalVM JDK | `ghcr.io/donpedrotv/pterodactyl-images:java_25_graalvm_ee` |
+| Java 26 Oracle GraalVM JDK (EA) | `ghcr.io/donpedrotv/pterodactyl-images:java_26_graalvm_ee` |
 
 ### Java Dragonwell (AMD64/ARM64)
 
@@ -150,7 +155,7 @@ Navigate to `Admin Panel -> Nests -> Select your egg`. Add Docker image URL(s) f
 | Java 25 (LTS) | `ghcr.io/donpedrotv/pterodactyl-images:java_25_liberica` |
 | Java 26 | `ghcr.io/donpedrotv/pterodactyl-images:java_26_liberica` |
 
-### Java OpenJ9 (AMD64)
+### Java OpenJ9 (AMD64/ARM64)
 
 | Version | Image Tag |
 |---------|-----------|
@@ -162,6 +167,7 @@ Navigate to `Admin Panel -> Nests -> Select your egg`. Add Docker image URL(s) f
 | Java 20 | `ghcr.io/donpedrotv/pterodactyl-images:java_20_openj9` |
 | Java 21 (LTS) | `ghcr.io/donpedrotv/pterodactyl-images:java_21_openj9` |
 | Java 25 (LTS) | `ghcr.io/donpedrotv/pterodactyl-images:java_25_openj9` |
+| Java 26 | `ghcr.io/donpedrotv/pterodactyl-images:java_26_openj9` |
 
 ### Java Shenandoah (AMD64/ARM64)
 
@@ -173,6 +179,7 @@ These are [Shipilev experimental builds](https://builds.shipilev.net/). If you'r
 | Java 11 (LTS) | `ghcr.io/donpedrotv/pterodactyl-images:java_11_shenandoah` |
 | Java 17 (LTS) | `ghcr.io/donpedrotv/pterodactyl-images:java_17_shenandoah` |
 | Java 21 (LTS) | `ghcr.io/donpedrotv/pterodactyl-images:java_21_shenandoah` |
+| Java 25 (LTS) | `ghcr.io/donpedrotv/pterodactyl-images:java_25_shenandoah` |
 
 
 ## Node.js (AMD64/ARM64)
@@ -191,6 +198,7 @@ These are [Shipilev experimental builds](https://builds.shipilev.net/). If you'r
 | Node.js 22 | `ghcr.io/donpedrotv/pterodactyl-images:nodejs_22` |
 | Node.js 23 | `ghcr.io/donpedrotv/pterodactyl-images:nodejs_23` |
 | Node.js 24 | `ghcr.io/donpedrotv/pterodactyl-images:nodejs_24` |
+| Node.js 26 | `ghcr.io/donpedrotv/pterodactyl-images:nodejs_26` |
 
 ## Python (AMD64/ARM64)
 
@@ -204,7 +212,7 @@ These are [Shipilev experimental builds](https://builds.shipilev.net/). If you'r
 | Python 3.12 | `ghcr.io/donpedrotv/pterodactyl-images:python_3.12` |
 | Python 3.13 | `ghcr.io/donpedrotv/pterodactyl-images:python_3.13` |
 | Python 3.14 | `ghcr.io/donpedrotv/pterodactyl-images:python_3.14` |
-| Python 3.15 | `ghcr.io/donpedrotv/pterodactyl-images:python_3.15` |
+| Python 3.15 (preview) | `ghcr.io/donpedrotv/pterodactyl-images:python_3.15` |
 
 
 ## Game Specific
