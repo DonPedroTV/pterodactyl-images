@@ -73,6 +73,7 @@ Navigate to `Admin Panel -> Nests -> Select your egg`. Add Docker image URL(s) f
 | Java 21 (LTS) | `ghcr.io/donpedrotv/pterodactyl-images:java_21_corretto` |
 | Java 25 (LTS) | `ghcr.io/donpedrotv/pterodactyl-images:java_25_corretto` |
 | Java 26 | `ghcr.io/donpedrotv/pterodactyl-images:java_26_corretto` |
+| Java 27 | `ghcr.io/donpedrotv/pterodactyl-images:java_27_corretto` |
 
 ### Java Eclipse Temurin (AMD64/ARM64)
 
@@ -88,6 +89,7 @@ Navigate to `Admin Panel -> Nests -> Select your egg`. Add Docker image URL(s) f
 | Java 21 (LTS) | `ghcr.io/donpedrotv/pterodactyl-images:java_21` |
 | Java 25 (LTS) | `ghcr.io/donpedrotv/pterodactyl-images:java_25` |
 | Java 26 | `ghcr.io/donpedrotv/pterodactyl-images:java_26` |
+| Java 27 | `ghcr.io/donpedrotv/pterodactyl-images:java_27` |
 
 ### Java Azul Zulu (AMD64/ARM64)
 
@@ -154,6 +156,7 @@ Navigate to `Admin Panel -> Nests -> Select your egg`. Add Docker image URL(s) f
 | Java 24 | `ghcr.io/donpedrotv/pterodactyl-images:java_24_liberica` |
 | Java 25 (LTS) | `ghcr.io/donpedrotv/pterodactyl-images:java_25_liberica` |
 | Java 26 | `ghcr.io/donpedrotv/pterodactyl-images:java_26_liberica` |
+| Java 27 | `ghcr.io/donpedrotv/pterodactyl-images:java_27_liberica` |
 
 ### Java OpenJ9 (AMD64/ARM64)
 
@@ -168,6 +171,7 @@ Navigate to `Admin Panel -> Nests -> Select your egg`. Add Docker image URL(s) f
 | Java 21 (LTS) | `ghcr.io/donpedrotv/pterodactyl-images:java_21_openj9` |
 | Java 25 (LTS) | `ghcr.io/donpedrotv/pterodactyl-images:java_25_openj9` |
 | Java 26 | `ghcr.io/donpedrotv/pterodactyl-images:java_26_openj9` |
+| Java 27 | `ghcr.io/donpedrotv/pterodactyl-images:java_27_openj9` |
 
 ### Java Shenandoah (AMD64/ARM64)
 
