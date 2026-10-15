@@ -4,7 +4,8 @@ LABEL       author="Softwarenoob" maintainer="admin@softwarenoob.com"
 LABEL       org.opencontainers.image.source="https://github.com/DonPedroTV/pterodactyl-images"
 LABEL       org.opencontainers.image.licenses="MIT"
 
-RUN         apt-get update -y \
+RUN         sed -i 's|deb.debian.org/debian-security|archive.debian.org/debian-security|' /etc/apt/sources.list \
+            && apt-get update -y \
             && apt-get install -y --no-install-recommends curl ca-certificates openssl git tar sqlite3 fontconfig libfreetype6 libstdc++6 lsof build-essential tzdata iproute2 locales \
             && apt-get clean \
             && rm -rf /var/lib/apt/lists/* \
