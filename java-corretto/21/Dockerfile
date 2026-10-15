@@ -5,7 +5,7 @@ LABEL       org.opencontainers.image.source="https://github.com/DonPedroTV/ptero
 LABEL       org.opencontainers.image.licenses="MIT"
 
 RUN         yum upgrade -y \
-            && yum install -y curl ca-certificates openssl git tar sqlite fontconfig freetype freetype-devel lsof tzdata iproute \
+            && yum install -y --allowerasing curl ca-certificates openssl git tar sqlite fontconfig freetype freetype-devel lsof tzdata iproute \
             git gcc gcc-c++ automake make libtool \
             && yum clean all \
             && rm -rf /var/cache/yum \
